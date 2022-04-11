@@ -2,7 +2,7 @@
 AL python Assessment 
 
 #Question 1
-The is a missing stateteme to declare counter as global
+- There is a missing statetement to declare counter as global
 
 #2
 - The output of the test is pass. The value needed to change to inc(4) 
@@ -21,7 +21,7 @@ How to create the docker Image for the python script and Recreate the output
  - Run the script using $ python3 q3solution.py
  - The output of the script should display the time is it took to his the specified websites.
  - To check a different website, edit the script
-		- in the URL variable add and website of your choice from 
+	- in the URL variable add and website of your choice from 
 		
 #Create a docker image
 4. To Create Dockerfile (e.g /Dockerfile) (Using VS code)
