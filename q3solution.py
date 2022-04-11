@@ -1,26 +1,17 @@
-
-from multiprocessing.sharedctypes import Value
+"""
+Provides total time it took to hit a website
+"""
 import requests
-from time import time
-import os
-
-url = os.environ ['URL']
-total = os.environ ['TOTAL']
-
-numvisit = 30
-totalvisits = 0
+NUMVIVISTS = 30
+TOTALVISITS = 0
 url = ["https://www.takealot.com/camping-outdoor/campingfurniture","https://docs.docker.com",
 "https://www.primevideo.com/"]
-total = 0
-
-for i in range(len(url)): 
-    if totalvisits < numvisit :
+TOTAL= 0
+for i in range(len(url)):
+    if TOTALVISITS < NUMVIVISTS :
         s = requests.get(url[i])
-        total = s.elapsed * numvisit
+        total = s.elapsed * NUMVIVISTS
         print (url[i])
         print ('Time: ', s.elapsed)
-        print ('Total of all hits: ',total)
-        
-   # print ('Number of visits = ',numvisit,'\n','Time to hit website = ' , end_time - start_time)
-
+        print ('Total of all hits: ',TOTAL)
 

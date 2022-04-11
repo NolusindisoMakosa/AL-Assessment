@@ -1,19 +1,16 @@
 FROM python:3
 
-#set eb
-ENV LANG C.UTF-8
-ENV LC_ALL C.UTF-8
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONFAULTHANDLER 1
-ENV URL 'url'
+#set env
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update
-RUN pip3 install requests
+RUN python3 -m pip install requests
 RUN mkdir app
 ADD q3solution.py /
-WORKDIR "/app"
-COPY q3solution.py app/q3solution.py
-ENV / q3solution.py
-CMD [ "/q3solution.py" ]
-ENTRYPOINT ["python3"]
+WORKDIR /app
+COPY . /app
+RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
+USER appuser
+CMD ["python", "q3solution.py"]
 
