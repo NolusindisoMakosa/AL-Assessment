@@ -39,6 +39,7 @@ How to create the docker Image for the python script
 6. Allow it to install the dependencies defined.
 7. Once it's done, check the docker images
 	$ docker images
-8. Test if the image created is is running
-    $ docker run pytheonimage
+Note: The image created must be on the list.
+8. To test if the image created is running corrently. You should be able to see the output of the python script
+    run $ docker run <image_ID> (instead of the docker Image ID, you can use the Docker name)
  
